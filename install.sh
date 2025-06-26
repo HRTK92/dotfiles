@@ -3,5 +3,5 @@
 curl -fsSL https://tailscale.com/install.sh | sh
 
 if [ -n "$TS_AUTHKEY" ]; then
-  sudo tailscale up --authkey "$TS_AUTHKEY" --hostname "$(hostname)-codespace"
+  sudo tailscale up --authkey "$TS_AUTHKEY" --hostname "$(hostname)-codespace" --accept-dns=false --accept-routes --ssh
 fi
